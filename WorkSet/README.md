@@ -2,5 +2,5 @@
 
 ## QRコード用の見本
 
-[JSONファイル](./qrcode.json)
-[QRコード化されたJSONファイル](./qrcode.png)
++ [JSONファイル](./qrcode.json)
++ [QRコード化されたJSONファイル](./qrcode.png)
