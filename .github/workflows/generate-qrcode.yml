@@ -3,35 +3,49 @@ name: Generate QR Code from JSON
 on:
   push:
     branches:
-      - main # main ブランチへのプッシュをトリガーにする場合
+      - main  # このワークフローをトリガーするブランチを指定
     paths:
-      - 'WorkSet/data.json' # data.json が変更された場合のみトリガー
+      - 'WorkSet/data.json'  # 監視対象のJSONファイルのパスを指定
 
 jobs:
-  build:
-    runs-on: ubuntu-latest # 実行環境
+  generate-qr-code:
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4 # リポジトリのコードをチェックアウト
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Set up Node.js
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # 使用する Node.js のバージョンを指定
+          node-version: '18'
 
       - name: Install dependencies
-        run: npm install qrcode # QR コード生成ライブラリをインストール
+        run: |
+          npm init -y
+          npm install qrcode
 
       - name: Generate QR Code
-        run: node scripts/generate-qrcode.js # 作成したスクリプトを実行
+        id: generate_qr
+        run: |
+          node -e "
+            const fs = require('fs');
+            const qrcode = require('qrcode');
+            const data = fs.readFileSync('WorkSet/data.json', 'utf8');
+            qrcode.toFile('WorkSet/qrcode.png', data, {
+              errorCorrectionLevel: 'H'
+            }, err => {
+              if (err) throw err;
+              console.log('QR code generated successfully!');
+            });
+          "
 
-      - name: Commit and push QR Code
-        uses: EndBug/add-and-commit@v9 # QR コードをコミット・プッシュするアクション
-        with:
-          message: "feat: Update QR code for data.json" # コミットメッセージ
-          add: 'WorkSet/qrcode.png' # 追加するファイル
-          author_name: "GitHub Actions" # コミットの作成者名
-          author_email: "actions@github.com" # コミットの作成者メールアドレス
-          commit_author: "github-actions[bot] <actions@github.com>" # コミットの Author ヘッダー
-          branch: main # プッシュするブランチ
+      - name: Commit and push QR code
+        run: |
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
+          git add WorkSet/qrcode.png
+          git commit -m 'feat: Generate QR code from data.json'
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
