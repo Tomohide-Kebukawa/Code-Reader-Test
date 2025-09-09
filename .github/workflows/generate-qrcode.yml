@@ -5,7 +5,7 @@ on:
     branches:
       - main # main ブランチへのプッシュをトリガーにする場合
     paths:
-      - 'blob/main/WorkSet/data.json' # data.json が変更された場合のみトリガー
+      - 'WorkSet/data.json' # data.json が変更された場合のみトリガー
 
 jobs:
   build:
@@ -30,7 +30,7 @@ jobs:
         uses: EndBug/add-and-commit@v9 # QR コードをコミット・プッシュするアクション
         with:
           message: "feat: Update QR code for data.json" # コミットメッセージ
-          add: 'blob/main/WorkSet/qrcode.png' # 追加するファイル
+          add: 'WorkSet/qrcode.png' # 追加するファイル
           author_name: "GitHub Actions" # コミットの作成者名
           author_email: "actions@github.com" # コミットの作成者メールアドレス
           commit_author: "github-actions[bot] <actions@github.com>" # コミットの Author ヘッダー
