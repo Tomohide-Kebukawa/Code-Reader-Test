@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - 'WorkSet/data.json'
+      - 'WorkSet/qrcode.json'
 
 jobs:
   generate-qr-code:
