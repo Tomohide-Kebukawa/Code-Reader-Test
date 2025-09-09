@@ -5,5 +5,5 @@
 <img src="./qrcode.png" wifth="200x" height="200px" align="right">
 
 + [JSONファイル](./qrcode.json)
-+ [QRコード化されたJSONファイル](./qrcode.png)
++ [QRコード](./qrcode.png)（上記のJSONから生成）
 
