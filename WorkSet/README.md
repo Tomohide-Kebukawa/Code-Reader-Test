@@ -2,5 +2,8 @@
 
 ## QRコード用の見本
 
+<img src="./qrcode.png" wifth="200x" height="200px" align="right">
+
 + [JSONファイル](./qrcode.json)
 + [QRコード化されたJSONファイル](./qrcode.png)
+
