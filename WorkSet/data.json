@@ -50,56 +50,6 @@
     ]
   },
   {
-    "index" : 1,
-    "name" : "出荷処理",
-    "codeSetList" : [
-      {
-        "index" : 0,
-        "field" : "sagyousha",
-        "name" : "出荷作業者コード",
-        "codeSetList" : [
-
-        ],
-        "type" : "qr"
-      },
-      {
-        "index" : 1,
-        "field" : "shouko",
-        "name" : "倉庫コード",
-        "codeSetList" : [
-
-        ],
-        "type" : "bar"
-      },
-      {
-        "index" : 2,
-        "field" : "",
-        "name" : "現場出荷作業",
-        "codeSetList" : [
-          {
-            "index" : 0,
-            "codeSetList" : [
-
-            ],
-            "type" : "bar",
-            "name" : "商品コード",
-            "field" : "shouhin"
-          },
-          {
-            "index" : 1,
-            "codeSetList" : [
-
-            ],
-            "type" : "num",
-            "name" : "出荷数量",
-            "field" : "number"
-          }
-        ],
-        "type" : "combo"
-      }
-    ]
-  },
-  {
     "index" : 3,
     "name" : "種類見本",
     "codeSetList" : [
