@@ -1,0 +1,257 @@
+[
+  {
+    "index" : 0,
+    "name" : "受入処理",
+    "codeSetList" : [
+      {
+        "index" : 0,
+        "field" : "sagyousha",
+        "name" : "入荷作業者コード",
+        "codeSetList" : [
+
+        ],
+        "type" : "qr"
+      },
+      {
+        "index" : 1,
+        "field" : "shouko",
+        "name" : "倉庫コード",
+        "codeSetList" : [
+
+        ],
+        "type" : "bar"
+      },
+      {
+        "index" : 2,
+        "field" : "shouhin",
+        "name" : "現場入荷作業",
+        "codeSetList" : [
+          {
+            "index" : 0,
+            "codeSetList" : [
+
+            ],
+            "type" : "bar",
+            "name" : "商品コード",
+            "field" : "shouhin"
+          },
+          {
+            "index" : 1,
+            "codeSetList" : [
+
+            ],
+            "type" : "num",
+            "name" : "入荷数量",
+            "field" : "number"
+          }
+        ],
+        "type" : "combo"
+      }
+    ]
+  },
+  {
+    "index" : 1,
+    "name" : "出荷処理",
+    "codeSetList" : [
+      {
+        "index" : 0,
+        "field" : "sagyousha",
+        "name" : "出荷作業者コード",
+        "codeSetList" : [
+
+        ],
+        "type" : "qr"
+      },
+      {
+        "index" : 1,
+        "field" : "shouko",
+        "name" : "倉庫コード",
+        "codeSetList" : [
+
+        ],
+        "type" : "bar"
+      },
+      {
+        "index" : 2,
+        "field" : "",
+        "name" : "現場出荷作業",
+        "codeSetList" : [
+          {
+            "index" : 0,
+            "codeSetList" : [
+
+            ],
+            "type" : "bar",
+            "name" : "商品コード",
+            "field" : "shouhin"
+          },
+          {
+            "index" : 1,
+            "codeSetList" : [
+
+            ],
+            "type" : "num",
+            "name" : "出荷数量",
+            "field" : "number"
+          }
+        ],
+        "type" : "combo"
+      }
+    ]
+  },
+  {
+    "index" : 2,
+    "name" : "棚卸し",
+    "codeSetList" : [
+      {
+        "index" : 0,
+        "field" : "sagyousha",
+        "name" : "棚卸し作業者コード",
+        "codeSetList" : [
+
+        ],
+        "type" : "qr"
+      },
+      {
+        "index" : 1,
+        "field" : "shouko",
+        "name" : "倉庫区画コード",
+        "codeSetList" : [
+
+        ],
+        "type" : "qr"
+      },
+      {
+        "index" : 2,
+        "field" : "shouhin",
+        "name" : "商品コード",
+        "codeSetList" : [
+
+        ],
+        "type" : "bar"
+      },
+      {
+        "index" : 3,
+        "field" : "number",
+        "name" : "数量",
+        "codeSetList" : [
+
+        ],
+        "type" : "num"
+      },
+      {
+        "index" : 4,
+        "field" : "note",
+        "name" : "備考",
+        "codeSetList" : [
+
+        ],
+        "type" : "str"
+      }
+    ]
+  },
+  {
+    "index" : 3,
+    "name" : "種類見本",
+    "codeSetList" : [
+      {
+        "index" : 0,
+        "field" : "shouhin",
+        "name" : "バーコード",
+        "codeSetList" : [
+
+        ],
+        "type" : "bar"
+      },
+      {
+        "index" : 1,
+        "field" : "sagyousha",
+        "name" : "QRコード",
+        "codeSetList" : [
+
+        ],
+        "type" : "qr"
+      },
+      {
+        "index" : 2,
+        "field" : "number",
+        "name" : "数量",
+        "codeSetList" : [
+
+        ],
+        "type" : "num"
+      },
+      {
+        "index" : 3,
+        "field" : "note",
+        "name" : "テキスト",
+        "codeSetList" : [
+
+        ],
+        "type" : "str"
+      },
+      {
+        "index" : 4,
+        "field" : "",
+        "name" : "コンボ",
+        "codeSetList" : [
+          {
+            "index" : 0,
+            "codeSetList" : [
+
+            ],
+            "type" : "bar",
+            "name" : "バーコード",
+            "field" : "shouhin"
+          },
+          {
+            "index" : 1,
+            "codeSetList" : [
+
+            ],
+            "type" : "qr",
+            "name" : "QRコード",
+            "field" : "sagyousha"
+          },
+          {
+            "index" : 2,
+            "codeSetList" : [
+
+            ],
+            "type" : "num",
+            "name" : "数量",
+            "field" : "number"
+          },
+          {
+            "index" : 3,
+            "codeSetList" : [
+
+            ],
+            "type" : "str",
+            "name" : "テキスト",
+            "field" : "note"
+          },
+          {
+            "index" : 4,
+            "codeSetList" : [
+
+            ],
+            "type" : "xxx",
+            "name" : "間違ったタイプの例",
+            "field" : "note"
+          }
+        ],
+        "type" : "combo"
+      },
+      {
+        "index" : 5,
+        "field" : "note",
+        "name" : "間違ったタイプの例",
+        "codeSetList" : [
+
+        ],
+        "type" : "xxx"
+      }
+    ]
+  }
+]
