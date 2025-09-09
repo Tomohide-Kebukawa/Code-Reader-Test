@@ -1,56 +1,6 @@
 [
   {
-    "index" : 0,
-    "name" : "受入処理",
-    "codeSetList" : [
-      {
-        "index" : 0,
-        "field" : "sagyousha",
-        "name" : "入荷作業者コード",
-        "codeSetList" : [
-
-        ],
-        "type" : "qr"
-      },
-      {
-        "index" : 1,
-        "field" : "shouko",
-        "name" : "倉庫コード",
-        "codeSetList" : [
-
-        ],
-        "type" : "bar"
-      },
-      {
-        "index" : 2,
-        "field" : "shouhin",
-        "name" : "現場入荷作業",
-        "codeSetList" : [
-          {
-            "index" : 0,
-            "codeSetList" : [
-
-            ],
-            "type" : "bar",
-            "name" : "商品コード",
-            "field" : "shouhin"
-          },
-          {
-            "index" : 1,
-            "codeSetList" : [
-
-            ],
-            "type" : "num",
-            "name" : "入荷数量",
-            "field" : "number"
-          }
-        ],
-        "type" : "combo"
-      }
-    ]
-  },
-  {
-    "index" : 3,
+    "index" : 1,
     "name" : "種類見本",
     "codeSetList" : [
       {
