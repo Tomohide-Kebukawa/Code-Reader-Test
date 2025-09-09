@@ -7,36 +7,24 @@
         "index" : 0,
         "field" : "shouhin",
         "name" : "バーコード",
-        "codeSetList" : [
-
-        ],
         "type" : "bar"
       },
       {
         "index" : 1,
         "field" : "sagyousha",
         "name" : "QRコード",
-        "codeSetList" : [
-
-        ],
         "type" : "qr"
       },
       {
         "index" : 2,
         "field" : "number",
         "name" : "数量",
-        "codeSetList" : [
-
-        ],
         "type" : "num"
       },
       {
         "index" : 3,
         "field" : "note",
         "name" : "テキスト",
-        "codeSetList" : [
-
-        ],
         "type" : "str"
       },
       {
@@ -46,45 +34,30 @@
         "codeSetList" : [
           {
             "index" : 0,
-            "codeSetList" : [
-
-            ],
             "type" : "bar",
             "name" : "バーコード",
             "field" : "shouhin"
           },
           {
             "index" : 1,
-            "codeSetList" : [
-
-            ],
             "type" : "qr",
             "name" : "QRコード",
             "field" : "sagyousha"
           },
           {
             "index" : 2,
-            "codeSetList" : [
-
-            ],
             "type" : "num",
             "name" : "数量",
             "field" : "number"
           },
           {
             "index" : 3,
-            "codeSetList" : [
-
-            ],
             "type" : "str",
             "name" : "テキスト",
             "field" : "note"
           },
           {
             "index" : 4,
-            "codeSetList" : [
-
-            ],
             "type" : "xxx",
             "name" : "間違ったタイプの例",
             "field" : "note"
@@ -96,9 +69,6 @@
         "index" : 5,
         "field" : "note",
         "name" : "間違ったタイプの例",
-        "codeSetList" : [
-
-        ],
         "type" : "xxx"
       }
     ]
