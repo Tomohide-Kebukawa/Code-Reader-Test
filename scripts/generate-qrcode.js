@@ -4,9 +4,9 @@ const QRCode = require('qrcode');
 async function generateQRCode() {
   try {
     // JSON ファイルのパス
-    const jsonFilePath = './blob/main/WorkSet/data.json';
+    const jsonFilePath = 'WorkSet/data.json';
     // 出力する QR コード画像のパス
-    const qrCodeOutputPath = './blob/main/WorkSet/qrcode.png';
+    const qrCodeOutputPath = 'WorkSet/qrcode.png';
 
     // JSON ファイルを読み込む
     const jsonData = fs.readFileSync(jsonFilePath, 'utf-8');
