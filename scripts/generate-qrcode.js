@@ -14,6 +14,7 @@ async function generateQRCode() {
     // JSON の内容を QR コードとして生成する
     await QRCode.toFile(qrCodeOutputPath, jsonData, {
       type: 'png', // 画像フォーマット
+      version: 10,
       errorCorrectionLevel: 'H' // エラー訂正レベル (L, M, Q, H)
     });
 
