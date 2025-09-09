@@ -2,7 +2,7 @@ const QRCode = require('qrcode');
 const fs = require('fs');
 const path = require('path');
 
-const dataPath = path.join(__dirname, '../WorkSet/data.json');
+const dataPath = path.join(__dirname, '../WorkSet/qrcode.json');
 const outputPath = path.join(__dirname, '../WorkSet/qrcode.png');
 
 try {
