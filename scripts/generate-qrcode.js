@@ -11,9 +11,9 @@ try {
   // QRコードのオプションを設定
   const options = {
     // データをより多く格納するためにバージョンを高く設定 L 1~40 H
-    version: 30, 
+    version: 35, 
     // データ容量を増やすために誤り訂正レベルを低く設定 エラー訂正レベル (L, M, Q, H)
-    errorCorrectionLevel: 'H'
+    errorCorrectionLevel: 'Q'
   };
 
   QRCode.toFile(outputPath, jsonData, options, err => {
