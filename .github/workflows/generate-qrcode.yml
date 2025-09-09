@@ -3,9 +3,9 @@ name: Generate QR Code from JSON
 on:
   push:
     branches:
-      - main  # このワークフローをトリガーするブランチを指定
+      - main
     paths:
-      - 'WorkSet/data.json'  # 監視対象のJSONファイルのパスを指定
+      - 'WorkSet/data.json'
 
 jobs:
   generate-qr-code:
@@ -26,19 +26,12 @@ jobs:
           npm install qrcode
 
       - name: Generate QR Code
-        id: generate_qr
         run: |
-          node -e "
-            const fs = require('fs');
-            const qrcode = require('qrcode');
-            const data = fs.readFileSync('WorkSet/data.json', 'utf8');
-            qrcode.toFile('WorkSet/qrcode.png', data, {
-              errorCorrectionLevel: 'H'
-            }, err => {
-              if (err) throw err;
-              console.log('QR code generated successfully!');
-            });
-          "
+          # Make sure the path in your Node.js script is correct
+          # For example, if data.json is at the root of WorkSet/, use 'WorkSet/data.json'
+          node scripts/generate-qrcode.js
+        # Assuming your Node.js script is in 'scripts/generate-qrcode.js'
+        # and inside that script, you've corrected the path to 'WorkSet/data.json'
 
       - name: Commit and push QR code
         run: |
