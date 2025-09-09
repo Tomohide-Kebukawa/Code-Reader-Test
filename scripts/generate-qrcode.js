@@ -1,28 +1,30 @@
-const fs = require('fs');
 const QRCode = require('qrcode');
+const fs = require('fs');
+const path = require('path');
 
-async function generateQRCode() {
-  try {
-    // JSON ファイルのパス
-    const jsonFilePath = 'WorkSet/data.json';
-    // 出力する QR コード画像のパス
-    const qrCodeOutputPath = 'WorkSet/qrcode.png';
+const dataPath = path.join(__dirname, '../WorkSet/data.json');
+const outputPath = path.join(__dirname, '../WorkSet/qrcode.png');
 
-    // JSON ファイルを読み込む
-    const jsonData = fs.readFileSync(jsonFilePath, 'utf-8');
+try {
+  const jsonData = fs.readFileSync(dataPath, 'utf8');
 
-    // JSON の内容を QR コードとして生成する
-    await QRCode.toFile(qrCodeOutputPath, jsonData, {
-      type: 'png', // 画像フォーマット
-      version: 10,
-      errorCorrectionLevel: 'H' // エラー訂正レベル (L, M, Q, H)
-    });
+  // QRコードのオプションを設定
+  const options = {
+    // データをより多く格納するためにバージョンを高く設定
+    version: 10, 
+    // データ容量を増やすために誤り訂正レベルを低く設定 エラー訂正レベル (L, M, Q, H)
+    errorCorrectionLevel: 'L'
+  };
 
-    console.log(`QR code generated successfully at ${qrCodeOutputPath}`);
-  } catch (err) {
-    console.error('Error generating QR code:', err);
-    process.exit(1); // エラーが発生した場合は処理を中断
-  }
+  QRCode.toFile(outputPath, jsonData, options, err => {
+    if (err) {
+      // エラーが発生した場合は、詳細な情報を出力して終了
+      console.error('Error generating QR code:', err);
+      process.exit(1);
+    }
+    console.log('QR code generated successfully!');
+  });
+} catch (error) {
+  console.error('An error occurred while reading the data file:', error);
+  process.exit(1);
 }
-
-generateQRCode();
