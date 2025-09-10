@@ -1,76 +1,76 @@
 [
-  {
-    "index" : 1,
-    "name" : "種類見本",
-    "codeSetList" : [
-      {
-        "index" : 0,
-        "field" : "shouhin",
-        "name" : "バーコード",
-        "type" : "bar"
-      },
-      {
-        "index" : 1,
-        "field" : "sagyousha",
-        "name" : "QRコード",
-        "type" : "qr"
-      },
-      {
-        "index" : 2,
-        "field" : "number",
-        "name" : "数量",
-        "type" : "num"
-      },
-      {
-        "index" : 3,
-        "field" : "note",
-        "name" : "テキスト",
-        "type" : "str"
-      },
-      {
-        "index" : 4,
-        "field" : "",
-        "name" : "コンボ",
-        "codeSetList" : [
-          {
-            "index" : 0,
-            "type" : "bar",
-            "name" : "バーコード",
-            "field" : "shouhin"
-          },
-          {
-            "index" : 1,
-            "type" : "qr",
-            "name" : "QRコード",
-            "field" : "sagyousha"
-          },
-          {
-            "index" : 2,
-            "type" : "num",
-            "name" : "数量",
-            "field" : "number"
-          },
-          {
-            "index" : 3,
-            "type" : "str",
-            "name" : "テキスト",
-            "field" : "note"
-          },
-          {
-            "index" : 4,
-            "type" : "xxx",
-            "name" : "間違ったタイプの例",
-            "field" : "note"
-          }
-        ],
-        "type" : "combo"
-      },
-      {
-        "index" : 5,
-        "field" : "note",
-        "name" : "間違ったタイプの例",
-        "type" : "xxx"
-      }
-    ]
-  }
+{
+"index":1,
+"name":"種類見本",
+"codeSetList":[
+{
+"index":0,
+"field":"shouhin",
+"name":"バーコード",
+"type":"bar"
+},
+{
+"index":1,
+"field":"sagyousha",
+"name":"QRコード",
+"type":"qr"
+},
+{
+"index":2,
+"field":"number",
+"name":"数量",
+"type":"num"
+},
+{
+"index":3,
+"field":"note",
+"name":"テキスト",
+"type":"str"
+},
+{
+"index":4,
+"field":"",
+"name":"コンボ",
+"codeSetList":[
+{
+"index":0,
+"type":"bar",
+"name":"バーコード",
+"field":"shouhin"
+},
+{
+"index":1,
+"type":"qr",
+"name":"QRコード",
+"field":"sagyousha"
+},
+{
+"index":2,
+"type":"num",
+"name":"数量",
+"field":"number"
+},
+{
+"index":3,
+"type":"str",
+"name":"テキスト",
+"field":"note"
+},
+{
+"index":4,
+"type":"xxx",
+"name":"間違ったタイプの例",
+"field":"note"
+}
+],
+"type":"combo"
+},
+{
+"index":5,
+"field":"note",
+"name":"間違ったタイプの例",
+"type":"xxx"
+}
+]
+}
 ]
