@@ -56,13 +56,6 @@
 "name":"テキスト",
 "field":"note"
 },
-{
-"index":4,
-"type":"xxx",
-"name":"間違ったタイプの例",
-"field":"note"
-}
-],
 "type":"combo"
 },
 {
